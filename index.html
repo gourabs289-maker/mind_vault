@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mind Vault: Prize Puzzles - Solve brain puzzles, conquer the virtual market, and earn real gift cards!">
+    <title>Mind Vault: Prize Puzzles</title>
+    <style>
+        :root {
+            --bg-dark: #212529;
+            --bg-card: #343a40;
+            --text-main: #f8f9fa;
+            --text-muted: #adb5bd;
+            --accent-green: #28a745;
+            --accent-blue: #0d6efd;
+            --accent-orange: #fd7e14;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Navigation / Header */
+        header {
+            background-color: var(--bg-card);
+            padding: 20px 10%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* LOGO STYLING */
+        .app-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            object-fit: cover;
+            border: 2px solid var(--accent-green);
+        }
+
+        .brand h1 {
+            font-size: 24px;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+        .brand span {
+            color: var(--accent-green);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 10%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .hero-logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 25px;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.5);
+            margin-bottom: 20px;
+            border: 3px solid var(--accent-green);
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+
+        .play-store-btn {
+            background-color: var(--accent-blue);
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            display: inline-block;
+            transition: background 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .play-store-btn:hover {
+            background-color: #0b5ed7;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 60px 10%;
+            background-color: var(--bg-card);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: var(--bg-dark);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: left;
+            border: 1px solid #495057;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            color: var(--accent-green);
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        /* Contact & Footer */
+        footer {
+            padding: 60px 10% 30px;
+            text-align: center;
+        }
+
+        .contact-box {
+            background-color: var(--bg-card);
+            padding: 40px;
+            border-radius: 12px;
+            max-width: 600px;
+            margin: 0 auto 50px;
+            border: 1px solid var(--accent-orange);
+        }
+
+        .contact-box h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .contact-box a {
+            color: var(--accent-orange);
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-links {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #495057;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-main);
+        }
+
+        @media (max-width: 768px) {
+            .hero h2 { font-size: 32px; }
+            .hero { padding: 50px 5%; }
+            .features { padding: 40px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="brand">
+            <!-- INSTRUCTION: Upload your app logo to GitHub as 'logo.png' and it will display here -->
+            <img src="logo.png" alt="Mind Vault Logo" class="app-logo" onerror="this.style.display='none'">
+            <h1>MIND <span>VAULT</span></h1>
+        </div>
+    </header>
+
+    <section class="hero">
+        <!-- INSTRUCTION: The same logo is used here for the main hero display -->
+        <img src="logo.png" alt="Mind Vault App Icon" class="hero-logo" onerror="this.style.display='none'">
+        
+        <h2>Prize Puzzles</h2>
+        <p>Solve brain puzzles, conquer the virtual market, and earn real gift cards. The ultimate casual gaming experience where your strategic thinking unlocks real-world rewards.</p>
+        
+        <!-- INSTRUCTION: Replace '#' with your actual Google Play Store link once published -->
+        <a href="#" class="play-store-btn">Download on Google Play</a>
+    </section>
+
+    <section class="features">
+        <div class="feature-card">
+            <h3>🎮 Play & Earn</h3>
+            <p>Explore a growing library of 16+ unique engaging mini-games. From reflex challenges to deep logic puzzles, every game you play helps you accumulate points toward your monthly payout.</p>
+        </div>
+        <div class="feature-card">
+            <h3>💎 The Showcase Market</h3>
+            <p>Purchase precious digital ornaments that generate passive points every 24 hours. List your rare items on the open market, or try to hack other players' PINs to steal high-value assets.</p>
+        </div>
+        <div class="feature-card">
+            <h3>🎁 Real-World Rewards</h3>
+            <p>Once your balance reaches the 1000-point withdrawal threshold, seamlessly redeem your vested points for premium digital gift cards delivered straight to your email inbox every month.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="contact-box">
+            <h3>Need Support or Have Questions?</h3>
+            <p style="margin-bottom: 15px; color: var(--text-muted);">Reach out to our developer team directly for assistance, bug reports, or business inquiries.</p>
+            <a href="mailto:gourabmotolenovo@gmail.com">gourabmotolenovo@gmail.com</a>
+        </div>
+
+        <div class="footer-links">
+            <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 10px;">&copy; 2026 Mind Vault. All rights reserved.</p>
+            <a href="https://gourabs289-maker.github.io/Privacy-Policy-MindVault/">Privacy Policy</a>
+            <a href="mailto:gourabmotolenovo@gmail.com">Contact Us</a>
+        </div>
+    </footer>
+
+</body>
+</html>
