@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mind Vault: Prize Puzzles - Solve brain puzzles, conquer the virtual market, and earn real gift cards!">
-    <title>Mind Vault: Prize Puzzles</title>
+    <meta name="description" content="Mind Vault: Prize Puzzles - Solve daily brain games, conquer logic challenges, and earn digital gift cards from top global brands.">
+    <title>Mind Vault: Prize Puzzles | Play Brain Games & Earn Rewards</title>
     <style>
         :root {
             --bg-dark: #212529;
@@ -92,7 +92,7 @@
         .hero p {
             font-size: 18px;
             color: var(--text-muted);
-            max-width: 600px;
+            max-width: 700px;
             margin-bottom: 30px;
         }
 
@@ -104,28 +104,39 @@
             font-size: 18px;
             font-weight: bold;
             border-radius: 8px;
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
             transition: background 0.3s;
             text-transform: uppercase;
             letter-spacing: 1px;
+            box-shadow: 0 4px 10px rgba(13, 110, 253, 0.4);
         }
 
         .play-store-btn:hover {
             background-color: #0b5ed7;
+            transform: translateY(-2px);
         }
 
         /* Features Section */
+        .features-header {
+            text-align: center;
+            padding: 20px 10% 0;
+            font-size: 32px;
+            color: var(--accent-green);
+        }
+
         .features {
-            padding: 60px 10%;
-            background-color: var(--bg-card);
+            padding: 50px 10%;
+            background-color: var(--bg-dark);
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            gap: 25px;
         }
 
         .feature-card {
-            background-color: var(--bg-dark);
-            padding: 30px;
+            background-color: var(--bg-card);
+            padding: 25px;
             border-radius: 12px;
             text-align: left;
             border: 1px solid #495057;
@@ -134,22 +145,58 @@
 
         .feature-card:hover {
             transform: translateY(-5px);
+            border-color: var(--accent-green);
         }
 
         .feature-card h3 {
             color: var(--accent-green);
-            margin-bottom: 15px;
-            font-size: 22px;
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+        
+        .feature-card p {
+            font-size: 15px;
+            color: var(--text-muted);
+        }
+
+        /* FAQ / Important Note Section */
+        .faq-section {
+            padding: 50px 10%;
+            background-color: var(--bg-dark);
+        }
+
+        .faq-box {
+            background-color: var(--bg-card);
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+            border-left: 5px solid var(--accent-orange);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .faq-box h3 {
+            color: var(--accent-orange);
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+
+        .faq-box p {
+            color: var(--text-muted);
+            font-size: 15px;
+            line-height: 1.6;
         }
 
         /* Contact & Footer */
         footer {
+            background-color: var(--bg-card);
             padding: 60px 10% 30px;
             text-align: center;
         }
 
         .contact-box {
-            background-color: var(--bg-card);
+            background-color: var(--bg-dark);
             padding: 40px;
             border-radius: 12px;
             max-width: 600px;
@@ -193,7 +240,8 @@
         @media (max-width: 768px) {
             .hero h2 { font-size: 32px; }
             .hero { padding: 50px 5%; }
-            .features { padding: 40px 5%; }
+            .features { padding: 40px 5%; grid-template-columns: 1fr; }
+            .faq-section { padding: 40px 5%; }
         }
     </style>
 </head>
@@ -201,35 +249,88 @@
 
     <header>
         <div class="brand">
-            <!-- INSTRUCTION: Upload your app logo to GitHub as 'logo.png' and it will display here -->
             <img src="logo.png" alt="Mind Vault Logo" class="app-logo" onerror="this.style.display='none'">
             <h1>MIND <span>VAULT</span></h1>
         </div>
     </header>
 
     <section class="hero">
-        <!-- INSTRUCTION: The same logo is used here for the main hero display -->
         <img src="logo.png" alt="Mind Vault App Icon" class="hero-logo" onerror="this.style.display='none'">
         
         <h2>Prize Puzzles</h2>
-        <p>Solve brain puzzles, conquer the virtual market, and earn real gift cards. The ultimate casual gaming experience where your strategic thinking unlocks real-world rewards.</p>
+        <p>Challenge your mind with logic puzzles, test your trivia knowledge, and conquer complex math problems. Turn your cognitive skills into digital loyalty points and redeem them for premium gift cards worldwide.</p>
         
-        <!-- INSTRUCTION: Replace '#' with your actual Google Play Store link once published -->
-        <a href="#" class="play-store-btn">Download on Google Play</a>
+        <a href="https://play.google.com/store/apps/details?id=com.greenlab.mindvault" target="_blank" class="play-store-btn">
+            ▶ Get it on Google Play
+        </a>
     </section>
 
+    <h2 class="features-header">Brain Games & Logic Puzzles</h2>
     <section class="features">
         <div class="feature-card">
-            <h3>🎮 Play & Earn</h3>
-            <p>Explore a growing library of 16+ unique engaging mini-games. From reflex challenges to deep logic puzzles, every game you play helps you accumulate points toward your monthly payout.</p>
+            <h3>Daily Brain Games</h3>
+            <p>Jump into fresh, everyday puzzles designed to challenge your lateral thinking and problem-solving skills.</p>
         </div>
         <div class="feature-card">
-            <h3>💎 The Showcase Market</h3>
-            <p>Purchase precious digital ornaments that generate passive points every 24 hours. List your rare items on the open market, or try to hack other players' PINs to steal high-value assets.</p>
+            <h3>Mind-Bending Logic</h3>
+            <p>Test your reasoning with structured, brain-teasing levels that require smart deduction and quick thinking.</p>
         </div>
         <div class="feature-card">
-            <h3>🎁 Real-World Rewards</h3>
-            <p>Once your balance reaches the 1000-point withdrawal threshold, seamlessly redeem your vested points for premium digital gift cards delivered straight to your email inbox every month.</p>
+            <h3>Adaptive Progression</h3>
+            <p>Start easy and watch the game scale with you—puzzles get trickier as your gameplay skills increase.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Sharp Thinking</h3>
+            <p>Take on fast-paced, timed mini-games that test your reaction speed and on-the-spot decision making.</p>
+        </div>
+    </section>
+
+    <h2 class="features-header">Trivia & General Knowledge</h2>
+    <section class="features">
+        <div class="feature-card">
+            <h3>General Knowledge Quizzes</h3>
+            <p>Prove your smarts across massive trivia categories, including pop culture, history, and geography.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Test Your Trivia Skills</h3>
+            <p>Compete in high-stakes question-and-answer rounds where every correct guess boosts your high score.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Vocabulary Builders</h3>
+            <p>Unscramble tricky word puzzles and solve clever riddles designed to challenge your language skills.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Daily Trivia Streaks</h3>
+            <p>Log in every day to keep your streak alive and unlock bonus in-game points for consistent puzzle-solving.</p>
+        </div>
+    </section>
+
+    <h2 class="features-header">Loyalty Points & Rewards</h2>
+    <section class="features">
+        <div class="feature-card">
+            <h3>Redeem Digital Gift Cards</h3>
+            <p>Collect points as you solve puzzles and redeem them for digital gift cards at top global retailers.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Track Your Performance</h3>
+            <p>Monitor your win rates, daily scores, and gameplay stats to see how your puzzle strategy improves.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Climb the Leaderboards</h3>
+            <p>See how your trivia knowledge and puzzle times stack up against active players nationwide.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Score Points & Perks</h3>
+            <p>Turn your casual gaming time into a rewarding experience by reaching milestones and unlocking loyalty perks.</p>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="faq-box">
+            <h3>📌 Important Note on Regional Rewards</h3>
+            <p>Our base reward payout is calculated in USD. If you are playing outside the US (such as in Europe or the UK), your reward will automatically be converted into your local currency when you redeem it.</p>
+            <br>
+            <p><strong>Minimum Retailer Balances:</strong> Please note that some local retailers have minimum gift card purchase requirements (e.g., a €5.00 minimum). If your converted payout is lower than your local store's minimum, our provider allows you to leave the balance securely in your reward account. You can return to Mind Vault, play more games to earn another 1000 points, and combine multiple payouts until you afford the retail gift card of your choice!</p>
         </div>
     </section>
 
@@ -242,7 +343,7 @@
 
         <div class="footer-links">
             <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 10px;">&copy; 2026 Mind Vault. All rights reserved.</p>
-            <a href="https://gourabs289-maker.github.io/Privacy-Policy-MindVault/">Privacy Policy</a>
+            <a href="https://gourabs289-maker.github.io/Privacy-Policy-MindVault/" target="_blank">Privacy Policy</a>
             <a href="mailto:gourabmotolenovo@gmail.com">Contact Us</a>
         </div>
     </footer>
